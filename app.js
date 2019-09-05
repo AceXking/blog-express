@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const session = require('express-session')
 // var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 const blogRouter = require('./routes/blog');
@@ -18,6 +18,16 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(session({
+  secret: 'WDJ@#1OF9*2_2gg',
+  cookie: {
+    // path: '/',    // 默认配置
+    // httpOnly: true, // 默认配置
+    maxAge: 24 * 60 * 60 * 1000
+  }
+}))
+
 // app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', indexRouter);
