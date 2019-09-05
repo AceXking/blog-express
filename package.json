@@ -8,6 +8,7 @@
     "prd": "cross-env NODE_ENV=production nodemon ./bin/www"
   },
   "dependencies": {
+    "connect-redis": "^4.0.2",
     "cookie-parser": "~1.4.4",
     "cross-env": "^5.2.0",
     "debug": "~2.6.9",
@@ -18,6 +19,7 @@
     "morgan": "~1.9.1",
     "mysql": "^2.17.1",
     "nodemon": "^1.19.1",
+    "redis": "^2.8.0",
     "xss": "^1.0.6"
   }
 }
